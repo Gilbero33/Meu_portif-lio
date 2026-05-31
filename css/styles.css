@@ -1,0 +1,41 @@
+/* Layout da secção sobre para alinhar texto e imagem */
+.hero-layout {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 3rem;
+    width: 100%;
+}
+
+.hero-content {
+    flex: 1;
+}
+
+/* Configuração da imagem de perfil */
+.hero-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+#foto-perfil {
+    width: 280px;
+    height: 280px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid var(--accent-color);
+    box-shadow: 0 0 20px rgba(56, 189, 248, 0.3);
+}
+
+/* Ajuste de responsividade para ecrãs pequenos */
+@media (max-width: 768px) {
+    .hero-layout {
+        flex-direction: column-reverse;
+        text-align: center;
+        gap: 2rem;
+    }
+    #foto-perfil {
+        width: 200px;
+        height: 200px;
+    }
+}
